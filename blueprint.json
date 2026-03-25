@@ -5,7 +5,7 @@
       "step": "installTheme",
       "themeData": {
         "resource": "url",
-        "url": "https://github.com/sinanisler/snn-bp/raw/refs/heads/main/bricks.2.3.zip"
+        "url": "https://github.com/sinanisler/snn-bp/raw/refs/heads/main/bricks.zip"
       },
       "options": {
         "activate": false
