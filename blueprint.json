@@ -3,19 +3,16 @@
   "steps": [
     {
       "step": "installTheme",
-      "themeData": {
-        "resource": "url",
-        "url": "https://github.com/sinanisler/snn-bp/releases/latest/download/bricks.zip"
-      },
-      "options": {
-        "activate": false
+      "themeZipFile": {
+        "resource": "bundle",
+        "path": "bricks.zip"
       }
     },
     {
       "step": "installTheme",
-      "themeData": {
-        "resource": "url",
-        "url": "https://github.com/sinanisler/snn-brx-child-theme/releases/latest/download/snn-brx-child-theme.zip"
+      "themeZipFile": {
+        "resource": "bundle",
+        "path": "snn-brx-child-theme.zip"
       },
       "options": {
         "activate": true
@@ -29,4 +26,3 @@
     }
   ]
 }
-
