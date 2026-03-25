@@ -20,12 +20,16 @@ jobs:
         id: version
         run: echo "tag=v$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_OUTPUT
 
+      - name: Download snn-brx-child-theme
+        run: curl -L https://github.com/sinanisler/snn-brx-child-theme/releases/latest/download/snn-brx-child-theme.zip -o snn-brx-child-theme.zip
+
+      - name: Build release zip
+        run: zip snn-bp-release.zip blueprint.json bricks.zip snn-brx-child-theme.zip
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           name: Release ${{ steps.version.outputs.tag }}
           body: ${{ github.event.head_commit.message }}
-          files: |
-            blueprint.json
-            bricks.zip
+          files: snn-bp-release.zip
